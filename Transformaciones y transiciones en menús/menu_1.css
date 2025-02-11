@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'PT Sans', Arial, Verdana;
+    background-color: #eee;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #222;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120px;
+    margin: auto;
+    position: relative;
+    background-color: #2c3e50;
+    z-index: 7;
+  
+    li {
+      float: left;
+      width: 25%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    a {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      font-size: 18px;
+      z-index: 9;
+    }
+  }
+  
+  a.active {
+    background-color: #e74c3c;
+    pointer-events: none;
+  }
+  
+  /*El .slider hace que se mueva horizontalmente debajo de los elementos del menú para indicar cuál está activo, y su color de fondo cambia según el elemento del menú que está activo. */
+  li.slider {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #e74c3c;
+    z-index: 8;
+    /* Transición para las propiedades 'left' y 'background-color' con una duración de 0.4s */
+    transition: left .4s, background-color .4s;
+  }
+  
+  /* Estilos para el primer elemento de la lista cuando se encuentra en estado hover, focus o active */
+  .menu li:nth-child(1):hover,
+  .menu li:nth-child(1):focus,
+  .menu li:nth-child(1):active {
+    /* Selecciona el elemento hermano con la clase 'slider' y aplica los siguientes estilos */
+    & ~ .slider {
+      left: 0; /* Mueve el slider a la posición inicial */
+      background-color: #3498db; /* Cambia el color de fondo del slider */
+    }
+  }
+  
+  /* Estilos para el segundo elemento de la lista cuando se encuentra en estado hover, focus o active */
+  .menu li:nth-child(2):hover,
+  .menu li:nth-child(2):focus,
+  .menu li:nth-child(2):active {
+    /* Selecciona el elemento hermano con la clase 'slider' y aplica los siguientes estilos */
+    & ~ .slider {
+      left: 25%; /* Mueve el slider al 25% de su contenedor */
+      background-color: #9b59b6; /* Cambia el color de fondo del slider */
+    }
+  }
+  
+  /* Estilos para el tercer elemento de la lista cuando se encuentra en estado hover, focus o active */
+  .menu li:nth-child(3):hover,
+  .menu li:nth-child(3):focus,
+  .menu li:nth-child(3):active {
+    /* Selecciona  El & representa el selector padre en el contexto actual, y el ~ es un selector de hermanos generales con la clase 'slider' y aplica los siguientes estilos */
+    & ~ .slider {
+      left: 50%; /* Mueve el slider al 50% de su contenedor */
+      background-color: #e67e22; /* Cambia el color de fondo del slider */
+    }
+  }
+  
+  /* Estilos para el cuarto elemento de la lista cuando se encuentra en estado hover, focus o active */
+  .menu li:nth-child(4):hover,
+  .menu li:nth-child(4):focus,
+  .menu li:nth-child(4):active {
+    /* Selecciona el elemento hermano con la clase 'slider' y aplica los siguientes estilos */
+    & ~ .slider {
+      left: 75%; /* Mueve el slider al 75% de su contenedor */
+      background-color: #16a085; /* Cambia el color de fondo del slider */
+    }
+  }
