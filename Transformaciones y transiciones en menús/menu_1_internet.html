@@ -4,16 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="menu_1.css">
-    <title>Menu_1</title>
+    <title>Nolae - Tienda K-pop</title>
+    <!-- Pagina web: https://nolae.es/ -->
+     <!--  Los SVG estan asi porque los copie con el f12 de la pagina -->
 </head>
 <body>
-    <!-- Enlace de la pagina: https://www.sessionstudio.com.ar/blog/2019/04/17/5-menus-de-navegacion-para-tu-sitio-web/ -->
-    <ul class="menu">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-        <li class="slider"></li>
-      </ul>
+    <header class="header">
+        <div class="top-bar">
+            <div class="search-container">
+                <div class="search-icon">
+                    <svg focusable="false" width="18" height="18" class="icon icon--header-search   " viewBox="0 0 18 18">
+                        <path d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17" fill="none" stroke="currentColor" stroke-width="2"></path>
+                      </svg>
+                </div>
+                <input type="text" class="search-input" placeholder="¿Qué busca?">
+            </div>
+            
+            <div class="logo">
+                <img src="img/Logo_Nolae.jpg" alt="Nolae">
+            </div>
+            
+            <div class="user-cart">
+                <div class="user-icon">
+                    <svg focusable="false" width="18" height="17" class="icon icon--header-customer   " viewBox="0 0 18 17">
+                        <circle cx="9" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></circle>
+                        <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="currentColor" stroke-width="2"></path>
+                      </svg>
+                </div>
+                <div class="cart-icon">
+                    <svg focusable="false" width="20" height="18" class="icon icon--header-cart   " viewBox="0 0 20 18">
+                        <path d="M3 1h14l1 16H2L3 1z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                        <path d="M7 4v0a3 3 0 003 3v0a3 3 0 003-3v0" fill="none" stroke="currentColor" stroke-width="2"></path>
+                      </svg>
+                </div>
+            </div>
+        </div>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#">Álbums</a>
+                    <ul class="submenu">
+                        <li><a href="#">Boygroups</a></li>
+                        <li><a href="#">Girlgroups</a></li>
+                        <li><a href="#">O.S.T</a></li>
+                        <li><a href="#">Solo Artists</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Merchandise</a>
+                    <ul class="submenu">
+                        <li><a href="#">Light Sticks</a></li>
+                        <li><a href="#">Revistas y libros de fotos</a></li>
+                        <li><a href="#">DVD & Blu-Ray</a></li>
+                        <li><a href="#">Tarjetas con foto y POB</a></li>
+                        <li><a href="#">Season´s Greetings</a></li>
+                        <li><a href="#">BT21</a></li>
+                        <li><a href="#">Poster</a></li>
+                        <li><a href="#">Otros productos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#">Pre-Order</a></li>
+                <li class="nav-item"><a href="#">Idols A-Z</a></li>
+                <li class="nav-item"><a href="#">Rebajas</a></li>
+                <li class="nav-item"><a href="#">Back in Stock</a></li>
+                <li class="nav-item"><a href="#">Menos de €10</a></li>
+                <li class="nav-item"><a href="#">Premios</a></li>
+                <li class="nav-item"><a href="#">Seguimiento del envío</a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>

@@ -1,117 +1,154 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-  }
-  
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'PT Sans', Arial, Verdana;
-    background-color: #eee;
-  }
-  
-  h1 {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff9f9;
+}
+
+.header {
+    background-color: #fff9f9;
+    padding: 15px 30px;
+    border-bottom: 1px solid #f0e0e0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    color: #c96a9d;
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    color: #c96a9d;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #c96a9d;
+}
+
+.logo {
     text-align: center;
-    font-size: 48px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #222;
-  }
-  
-  .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 120px;
-    margin: auto;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.user-cart {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon, .cart-icon {
+    color: #c96a9d;
+    font-size: 1.2rem;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.cart-icon {
     position: relative;
-    background-color: #2c3e50;
-    z-index: 7;
-  
-    li {
-      float: left;
-      width: 25%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    
-    a {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      text-decoration: none;
-      position: relative;
-      font-size: 18px;
-      z-index: 9;
-    }
-  }
-  
-  a.active {
-    background-color: #e74c3c;
-    pointer-events: none;
-  }
-  
-  /*El .slider hace que se mueva horizontalmente debajo de los elementos del menú para indicar cuál está activo, y su color de fondo cambia según el elemento del menú que está activo. */
-  li.slider {
-    width: 25%;
-    height: 100%;
+}
+
+.cart-count {
     position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #c96a9d;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    padding-bottom: 10px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #c96a9d;
+    font-size: 0.9rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
     left: 0;
-    top: 0;
-    background-color: #e74c3c;
-    z-index: 8;
-    /* Transición para las propiedades 'left' y 'background-color' con una duración de 0.4s */
-    transition: left .4s, background-color .4s;
-  }
-  
-  /* Estilos para el primer elemento de la lista cuando se encuentra en estado hover, focus o active */
-  .menu li:nth-child(1):hover,
-  .menu li:nth-child(1):focus,
-  .menu li:nth-child(1):active {
-    /* Selecciona el elemento hermano con la clase 'slider' y aplica los siguientes estilos */
-    & ~ .slider {
-      left: 0; /* Mueve el slider a la posición inicial */
-      background-color: #3498db; /* Cambia el color de fondo del slider */
-    }
-  }
-  
-  /* Estilos para el segundo elemento de la lista cuando se encuentra en estado hover, focus o active */
-  .menu li:nth-child(2):hover,
-  .menu li:nth-child(2):focus,
-  .menu li:nth-child(2):active {
-    /* Selecciona el elemento hermano con la clase 'slider' y aplica los siguientes estilos */
-    & ~ .slider {
-      left: 25%; /* Mueve el slider al 25% de su contenedor */
-      background-color: #9b59b6; /* Cambia el color de fondo del slider */
-    }
-  }
-  
-  /* Estilos para el tercer elemento de la lista cuando se encuentra en estado hover, focus o active */
-  .menu li:nth-child(3):hover,
-  .menu li:nth-child(3):focus,
-  .menu li:nth-child(3):active {
-    /* Selecciona  El & representa el selector padre en el contexto actual, y el ~ es un selector de hermanos generales con la clase 'slider' y aplica los siguientes estilos */
-    & ~ .slider {
-      left: 50%; /* Mueve el slider al 50% de su contenedor */
-      background-color: #e67e22; /* Cambia el color de fondo del slider */
-    }
-  }
-  
-  /* Estilos para el cuarto elemento de la lista cuando se encuentra en estado hover, focus o active */
-  .menu li:nth-child(4):hover,
-  .menu li:nth-child(4):focus,
-  .menu li:nth-child(4):active {
-    /* Selecciona el elemento hermano con la clase 'slider' y aplica los siguientes estilos */
-    & ~ .slider {
-      left: 75%; /* Mueve el slider al 75% de su contenedor */
-      background-color: #16a085; /* Cambia el color de fondo del slider */
-    }
-  }
+    background-color: #c96a9d;
+    transition: width 0.3s;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.nav-item a:hover {
+    color: #a04b7a;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+}
+
+.submenu li {
+    padding: 5px 20px;
+}
+
+.submenu li a {
+    color: #000000;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu li a:hover {
+    color: #a04b7a;
+}
+
+.nav-item:hover .submenu {
+    display: block;
+}
